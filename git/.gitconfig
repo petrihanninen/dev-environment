@@ -1,0 +1,13 @@
+[core]
+    excludesfile = /Users/petrihanninen/.gitignore_global
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[user]
+    name = Petri Hänninen
+    email = petri.hanninen@dingle.fi
