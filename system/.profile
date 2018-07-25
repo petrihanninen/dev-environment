@@ -1,6 +1,7 @@
 # Set PATH
 export PATH=/n/.npm_global/bin:$PATH
 
+
 # Open Visual Studio Code Insiders
 alias c='code-insiders '
 alias code='code-insiders '
@@ -11,7 +12,12 @@ alias sudo='sudo '
 
 # List files with human-readable file sizes
 alias ll='ls -lh '
-alias ll='ls -lhA '
+alias la='ls -lhA '
+
+# Find
+function f() {
+  find . -type f -exec grep $1 '{}' \; -print
+}
 
 # Manage this file
 alias edit_profile='open -e ~/.profile'
