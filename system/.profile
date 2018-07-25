@@ -21,7 +21,7 @@ function f() {
 
 # Manage this file
 alias edit_profile='open -e ~/.profile'
-alias reload_profile='. ~/.profile'
+alias reload_profile='. ~/.profile && cp ~/.profile ~/Dropbox\ \(Aller\)/webdev/dev-environment/system'
 
 # Git
 alias ga="git add"
