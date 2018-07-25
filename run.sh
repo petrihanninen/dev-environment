@@ -1,4 +1,5 @@
 #!/bin/bash
 
-# Install .profile
+# Install and reload .profile
 cp system/.profile ~/
+. ~/.profile
