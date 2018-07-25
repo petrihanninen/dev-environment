@@ -18,6 +18,9 @@ alias la='ls -lhA '
 function f() {
   find . -type f -exec grep $1 '{}' \; -print
 }
+function fL() {
+  find -L . -type f -exec grep $1 '{}' \; -print
+}
 
 # Manage this file
 alias edit_profile='open -e ~/.profile'
