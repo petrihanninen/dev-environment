@@ -1,6 +1,11 @@
 // Place your key bindings in this file to overwrite the defaults
 [{
-  "key": "cmd+r",
-  "command": "workbench.action.reloadWindow",
-  "when": "editorTextFocus"
-}]
+    "key": "cmd+r",
+    "command": "workbench.action.reloadWindow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "git.push"
+  }
+]
