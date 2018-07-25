@@ -1,5 +1,5 @@
 # Set PATH
-export PATH=/n/.npm_global/bin:$PATH
+export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH"
 
 
 # Open Visual Studio Code Insiders
