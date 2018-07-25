@@ -1,0 +1,71 @@
+{
+	"name": "trimspaces",
+	"displayName": "Trim Spaces",
+	"description": "Trims unnecessary spaces and reduces file size.",
+	"version": "0.0.24",
+	"publisher": "igordvlpr",
+	"license": "SEE LICENSE IN LICENSE.txt",
+	"homepage": "https://github.com/igorskyflyer/vscode-trim-spaces-extension/",
+	"author": {
+		"name": "Igor Dimitrijević"
+	},
+	"icon": "assets/icon.png",
+	"engines": {
+		"vscode": "^1.19.0"
+	},
+	"bugs": {
+		"url": "https://github.com/igorskyflyer/vscode-trim-spaces-extension/issues",
+		"email": "igor.dvlpr@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/igorskyflyer/vscode-trim-spaces-extension.git"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"keywords": [
+		"trimspaces",
+		"extension",
+		"format",
+		"editor",
+		"tool"
+	],
+	"activationEvents": [
+		"onCommand:extension.trimSpaces"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.trimSpaces",
+				"title": "Trim Trailing Spaces",
+				"when": "editor.isOpen && editorTextFocus"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.trimSpaces",
+				"key": "ctrl+alt+t",
+				"mac": "cmd+alt+t",
+				"when": "editor.isOpen && editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"@types/node": "^7.0.43"
+	},
+	"__metadata": {
+		"id": "be2543ae-3718-49b1-b44a-79d4272ee9d8",
+		"publisherId": "83b2a75e-0027-4bb1-b203-f34e3f3571d0",
+		"publisherDisplayName": "Igor Dimitrijević"
+	}
+}

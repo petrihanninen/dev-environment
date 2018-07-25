@@ -1,0 +1,57 @@
+{
+	"name": "vscode-rainbow-string",
+	"displayName": "Rainbow String",
+	"description": "Add rainbow effect to quoted string",
+	"version": "18.3.3",
+	"publisher": "wk-j",
+	"icon": "images/Icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wk-j/vscode-rainbow-string"
+	},
+	"engines": {
+		"vscode": "^1.20.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"configuration": {
+			"title": "Rainbow string configuration",
+			"type": "object",
+			"properties": {
+				"rainbowString": {
+					"type": "object",
+					"properties": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "e6713da3-ba88-4d76-a942-2fc415799f5e",
+		"publisherId": "86b1f2d9-16c1-4160-a17e-35a3936be9db",
+		"publisherDisplayName": "wk-j"
+	}
+}
