@@ -1,5 +1,6 @@
 [core]
     excludesfile = /Users/petrihanninen/.gitignore_global
+	autocrlf = input
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
