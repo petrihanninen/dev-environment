@@ -3,8 +3,14 @@ export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/
 
 
 # Open Visual Studio Code Insiders
-alias c='code-insiders '
 alias code='code-insiders '
+function c() {
+  if [ $1 ]; then
+    code $1
+  else
+    code .
+  fi
+}
 
 # Enable aliases for sudo
 # See http://www.shellperson.net/using-sudo-with-an-alias/
