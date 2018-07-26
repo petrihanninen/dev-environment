@@ -12,6 +12,10 @@ function c() {
   fi
 }
 
+# Alias for composer
+alias composer='composer.phar '
+alias comp='composer '
+
 # Enable aliases for sudo
 # See http://www.shellperson.net/using-sudo-with-an-alias/
 alias sudo='sudo '
