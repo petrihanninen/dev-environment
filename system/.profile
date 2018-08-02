@@ -1,7 +1,5 @@
 # Set PATH
 export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH"
-
-
 # Open Visual Studio Code Insiders
 alias code='code-insiders '
 function c() {
@@ -11,19 +9,16 @@ function c() {
     code .
   fi
 }
-
 # Alias for composer
 alias composer='composer.phar '
-alias comp='composer '
-
+alias com='composer '
+alias comi='composer install'
 # Enable aliases for sudo
 # See http://www.shellperson.net/using-sudo-with-an-alias/
 alias sudo='sudo '
-
 # List files with human-readable file sizes
 alias ll='ls -lh '
 alias la='ls -lhA '
-
 # Find
 function f() {
   find . -type f -exec grep $1 '{}' \; -print
@@ -31,11 +26,9 @@ function f() {
 function fL() {
   find -L . -type f -exec grep $1 '{}' \; -print
 }
-
 # Manage this file
 alias edit_profile='open -e ~/.profile'
 alias reload_profile='. ~/.profile && cp ~/.profile ~/Dropbox\ \(Aller\)/webdev/dev-environment/system'
-
 # Git
 alias ga="git add"
 alias gaa="git add ."
