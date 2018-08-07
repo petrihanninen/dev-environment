@@ -1,5 +1,3 @@
-# Set PATH
-export PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH"
 # Open Visual Studio Code Insiders
 alias code='code-insiders '
 function c() {
@@ -9,6 +7,8 @@ function c() {
     code .
   fi
 }
+# Move files to trash
+alias del='trash'
 # Alias for composer
 alias composer='composer.phar '
 alias com='composer '
@@ -41,3 +41,5 @@ alias gd="git diff"
 alias gp="git push"
 alias gpf="git push -f"
 alias gs="git status"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
