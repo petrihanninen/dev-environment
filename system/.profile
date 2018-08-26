@@ -28,7 +28,16 @@ function fL() {
 }
 # Manage this file
 alias edit_profile='open -e ~/.profile'
-alias reload_profile='. ~/.profile && cp ~/.profile ~/Dropbox\ \(Aller\)/webdev/dev-environment/system'
+function reload_profile() {
+  CWD=$(pwd)
+  . ~/.profile
+  cp ~/.profile ~/Dropbox\ \(Aller\)/webdev/dev-environment/system
+  cd ~/Dropbox\ \(Aller\)/webdev/dev-environment
+  git add system/.profile
+  git commit -m “Update .profile”
+  git push
+  cd $CWD
+}
 # Git
 alias ga="git add"
 alias gaa="git add ."
@@ -43,3 +52,12 @@ alias gpf="git push -f"
 alias gs="git status"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# Copy & Paste
+alias copy='pbcopy < '
+alias paste='pbpaste > '
+# React
+function cra() {
+  npx create-react-app $1
+  cd $1
+  npm start
+}
