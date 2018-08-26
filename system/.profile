@@ -43,11 +43,11 @@ function fL() {
 alias edit_profile='open -e ~/.profile'
 function reload_profile() {
   if [[ "$1" ]]; then
-    . ~/.profile
     cp ~/.profile "$DEV_ENV/system/"
     git -C "$DEV_ENV" add system/.profile
     git -C "$DEV_ENV" commit -m "$1"
     git -C "$DEV_ENV" push
+    . ~/.profile
   else
     echo "Give commit message as argument"
   fi
