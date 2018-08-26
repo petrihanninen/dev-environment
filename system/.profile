@@ -47,7 +47,7 @@ function reload_profile() {
     git add system/.profile
     git commit -m "$1"
     git push
-    cd $CWD
+    cd "$CWD"
   else
     echo "Give commit message as argument"
   fi
