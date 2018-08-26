@@ -29,12 +29,12 @@ function fL() {
 # Manage this file
 alias edit_profile='open -e ~/.profile'
 function reload_profile() {
-  CWD=$(pwd)
+  CWD='$(pwd)'
   . ~/.profile
   cp ~/.profile ~/Dropbox\ \(Aller\)/webdev/dev-environment/system
   cd ~/Dropbox\ \(Aller\)/webdev/dev-environment
   git add system/.profile
-  git commit -m “Update .profile”
+  git commit -m 'Update .profile'
   git push
   cd $CWD
 }
@@ -61,3 +61,4 @@ function cra() {
   cd $1
   npm start
 }
+echo Hello World!
