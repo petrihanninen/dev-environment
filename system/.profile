@@ -1,3 +1,6 @@
+# HELPER
+DEV_ENV="/Users/petrihanninen/Dropbox (Aller)/webdev/dev-environment"
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -40,14 +43,11 @@ function fL() {
 alias edit_profile='open -e ~/.profile'
 function reload_profile() {
   if [[ "$1" ]]; then
-    CWD=$(pwd)
     . ~/.profile
-    cp ~/.profile ~/Dropbox\ \(Aller\)/webdev/dev-environment/system
-    cd ~/Dropbox\ \(Aller\)/webdev/dev-environment
-    git add system/.profile
-    git commit -m "$1"
-    git push
-    cd "$CWD"
+    cp ~/.profile "$DEV_ENV/system/"
+    git -C "$DEV_ENV" add system/.profile
+    git -C "$DEV_ENV" commit -m "$1"
+    git -C "$DEV_ENV" push
   else
     echo "Give commit message as argument"
   fi
