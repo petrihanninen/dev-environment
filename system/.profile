@@ -76,4 +76,15 @@ function cra() {
   cd $1
   npm start
 }
-echo Hello World!
+cat << EOF
+
+  ,-~~-._____.
+ / |  '       \         It was a dark and stormy night....
+(  )           0              
+ \_/-, ,------'            
+    ====           //                     
+   /  \-'~;    /~~~(O)
+  /  __/~|   /       |     
+=(  _____| (_________|
+
+EOF
