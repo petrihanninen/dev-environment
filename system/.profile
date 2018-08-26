@@ -74,6 +74,7 @@ alias paste='pbpaste > '
 function cra() {
   npx create-react-app $1
   cd $1
+  code-insiders .
   npm start
 }
 cat << EOF
