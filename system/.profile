@@ -5,6 +5,10 @@ DEV_ENV="/Users/petrihanninen/Dropbox (Aller)/webdev/dev-environment"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# PYTHON
+alias python='python3'
+alias py='python '
+
 # Open Visual Studio Code Insiders
 alias code='code-insiders '
 function c() {
