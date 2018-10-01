@@ -11,14 +11,15 @@ This repo is used mainly for storage/backup purposes. Here you can find all the 
 
 ### Code
 [Dash]()
-[iTerm]()
 [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/)
 
-### Browsers
+### Dev Tools
 [Cyberduck](https://cyberduck.io/)
 [Mountain Duck]()
 [MAMP (PRO)]()
 [Sequel Pro]()
+
+### Browsers
 [Firefox]()
 [Google Chrome]()
 
@@ -33,6 +34,24 @@ This repo is used mainly for storage/backup purposes. Here you can find all the 
 [Dropbox]()
 [Spotify]()
 [Wacom Driver]()
+[Divvy]()
+
+## Setup
+
+### Dev
+Symlinks to root for easy access `sudo ln -s path/to/folder /w`
+
+### Zsh
+Set zsh as default shell `chsh -s $(which zsh)`
+
+### Powerline fonts
+```bash
+cd /w/
+git clone https://github.com/powerline/fonts.git --depth=1 # Clone
+./fonts/install.sh # Install
+rm -rf fonts # Clean up
+```
+
 
 ## Author
 * [**Petri Hänninen**](https://petrihanninen.com)
